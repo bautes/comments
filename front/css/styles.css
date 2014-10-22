@@ -1,0 +1,31 @@
+.frmComment input {
+	display: block;
+	width: 200px;
+}
+
+.listComments {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.listItem {
+	margin: 10px 0;
+	font-size: 18px;
+	background-color: lightgray;
+}
+
+.item-head-author {
+	font-size: 14px;
+}
+.item-head-date {
+	font-size: 12px;
+}
+.item-link-answer {
+	font-size: 12px;
+	padding-left: 200px;
+	color: green;
+	cursor: pointer;
+}
+.item-responses {
+	padding-left: 40px;
+}

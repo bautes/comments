@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Comments system</title>
+<script type="text/javascript" src="<?= BASE_FRONT ?>/js/lib/comments.js"></script>
+<script type="text/javascript" src="<?= BASE_FRONT ?>/js/main.js"></script>
+<link rel="stylesheet" type="text/css" href="<?= BASE_FRONT ?>/css/styles.css">
+</head>
+
+<body>
+
+	<script id="formItemTpl" type="text/template">
+		<form class="frmComment" data-action="<?= BASE_AJAX_REQUESTS ?>?/comments/new" onSubmit="return false;">
+			<input name="parent_id" type="hidden" value="#{id}" />
+			<input name="email" type="email" required/>
+			<textarea name="comment" class="comment" required></textarea>
+			<input type="submit" value="send" name="send" id="send" />
+		</form>
+	</script>
+
+	<script id="commentItemTpl" type="text/template">
+		<div class="item-head">
+			<span class="item-head-author">#{author}</span>
+			<span class="item-head-date">#{date}</span>
+		</div>
+		<div class="item-body">
+			<div class="item-comment">#{comment}</div>
+			<a class="item-link-answer">Answer</a>
+			<div class="item-frm-answer"></div>
+			<div class="item-responses"></div>
+		</div>
+	</script>
+	<h1>Comments system</h1>
+	<div class="newComment" data-comment-action="newComment"></div>
+	<ul class="listComments" data-comment-action="showComments" data-action="<?= BASE_AJAX_REQUESTS ?>?/comments/show"></ul>
+</body>
+</html>

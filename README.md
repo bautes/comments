@@ -1,4 +1,4 @@
 comments
 ========
 
-Native comments system for
+Comments system made in PHP and javascript without any external library.
